@@ -202,5 +202,5 @@ Philadelphia, Pennsylvania 19104
 # Citation
 
 The paper associated with and describing this data set is:
-\emph{BuzzFace: a News Veracity Dataset with Facebook User Commentary and Egos},
+_BuzzFace: a News Veracity Dataset with Facebook User Commentary and Egos_,
 found in ICWSM-18.
