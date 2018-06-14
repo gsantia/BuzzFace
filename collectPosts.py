@@ -12,39 +12,39 @@ APP_SECRET = str(sys.argv[2])
 def createFeedUrl(username, APP_ID, APP_SECRET, limit):
     post_args = "/feed?access_token=" + APP_ID + "|" + APP_SECRET + \
                 "&fields=attachments,created_time,message&limit=" + str(limit)
-    post_url = "https://graph.facebook.com/" + username + post_args
+    post_url = "https://graph.facebook.com/v3.0/" + username + post_args
     return post_url
 
 def createPostUrl(USER_ID,POST_ID, APP_ID, APP_SECRET):
     post_args = "?access_token=" + APP_ID + "|" + APP_SECRET + \
                     "&fields=link,message,created_time,name,story,caption,description,picture,place,shares,source,updated_time"
-    post_url = "https://graph.facebook.com/" + USER_ID + "_" + POST_ID + post_args
+    post_url = "https://graph.facebook.com/v3.0/" + USER_ID + "_" + POST_ID + post_args
     return post_url
 
 def createPostCommentsUrl(USER_ID, POST_ID, APP_ID, APP_SECRET):
     comments_args = "/comments?access_token=" + APP_ID + "|" + APP_SECRET + \
                     "&order=chronological&limit=1000"
-    comments_url = ("https://graph.facebook.com/" + USER_ID + "_" +
+    comments_url = ("https://graph.facebook.com/v3.0/" + USER_ID + "_" +
                         POST_ID + comments_args)
     return comments_url
 
 def createPostAttachmentsUrl(USER_ID,POST_ID, APP_ID, APP_SECRET):
     attachments_args = "/attachments?access_token=" + APP_ID + "|" + APP_SECRET
-    attachments_url = ("https://graph.facebook.com/" + USER_ID + "_" +
+    attachments_url = ("https://graph.facebook.com/v3.0/" + USER_ID + "_" +
                         POST_ID + attachments_args)
     return attachments_url
 
 def createPostReactionsUrl(USER_ID,POST_ID, APP_ID, APP_SECRET):
     reactions_args = "/reactions?access_token=" + APP_ID + "|" + APP_SECRET + \
                     "&limit=1000"  
-    reactions_url = ("https://graph.facebook.com/" + USER_ID + "_" + POST_ID +
+    reactions_url = ("https://graph.facebook.com/v3.0/" + USER_ID + "_" + POST_ID +
                         reactions_args)
     return reactions_url
 
 def new_createPostReactionsUrl(USER_ID, POST_ID, APP_ID, APP_SECRET):
     reactions_args = "/reactions?access_token=" + APP_ID + "|" + APP_SECRET + \
             "&summary=total_count"
-    reactions_url = "https://graph.facebook.com/" + USER_ID + "_" + POST_ID + \
+    reactions_url = "https://graph.facebook.com/v3.0/" + USER_ID + "_" + POST_ID + \
             reactions_args
     return reactions_url
 
