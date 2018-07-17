@@ -1,4 +1,15 @@
 # BuzzFace
+A dataset focused on news stories (which are annotated for veracity) posted to Facebook during September 2016 consisting of:
++ Nearly 1.7 million Facebook comments discussing the news content
++ Facebook plugin comments
++ Disqus plugin comments
++ Associated webpage content of the news articles
+
+No similar data set focusing on Facebook exists at this time. Potential uses for the data
+include news veracity assessment using machine learning, social bot detection, and study of
+propogation of information through several various platforms.
+
+# Note
 All files and scripts included were created by the authors, except for
 `facebook-fact-check.csv`, which is the basis for the dataset. This file
 was created by a team at BuzzFeed as a result of the study detailed in:
