@@ -9,6 +9,8 @@ No similar data set focusing on Facebook exists at this time. Potential uses for
 include news veracity assessment using machine learning, social bot detection, and study of
 propogation of information through several various platforms.
 
+Read more about the set in our paper: https://www.aaai.org/ocs/index.php/ICWSM/ICWSM18/paper/view/17825/17046
+
 # Note
 All files and scripts included were created by the authors, except for
 `facebook-fact-check.csv`, which is the basis for the dataset. This file
