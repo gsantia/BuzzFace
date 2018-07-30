@@ -165,7 +165,10 @@ if __name__ == "__main__":
     # each API call here by setting n = (number of seconds). To be
     # safe and follow Facebook's conditions, we set n = 1 by default.
     # Change at your own risk.
-    n = 1
+    #
+    # NOTE: This has been changed from 1 to 20 due to ANOTHER change in
+    # the Facebook Graph API.
+    n = 20
 
     #make a dict to relate outlet names to their url repn's
     outlet_urls = {"ABC_News_Politics" : 'abc',

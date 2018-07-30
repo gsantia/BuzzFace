@@ -95,7 +95,11 @@ def retrieve(outlet):
             print "          comment #: ", str(j)
             COMMENT_ID = comment['id']
             #add the replies key
-            comment['replies'] = getPostComments(COMMENT_ID, n).get('data', [])
+            # NOTE: this will take an extremely long time with the new API limit,
+            # so this has been commented out. if you'd like to wait and get every single
+            # reply, uncomment this and get rid of the dummy replies line following
+            #comment['replies'] = getPostComments(COMMENT_ID, n).get('data', [])
+            comment['replies'] = []
         #now write the new file to disk
         new_filename = filename[:-13] + 'replies.json' #chop off the 'comments.json'
         os.system('touch ' + new_filename)
@@ -103,9 +107,11 @@ def retrieve(outlet):
             json.dump(commentsJSON, f2, indent = 4, sort_keys = True)
 
 if __name__ == '__main__':
-    n = 1
+    n = 20
     # This n is again the number of seconds the script sleeps after each API
     # request. Change at your own risk.
+    #
+    # NOTE: changed from 1 to 20 due to changes in FB API
 
     outlets = ['ABC_News_Politics',
                'Politico',
