@@ -1,5 +1,5 @@
 # BuzzFace
-A dataset focused on news stories (which are annotated for veracity) posted to Facebook during September 2016 consisting of:
+Scripts to create a dataset focused on news stories (which are annotated for veracity) posted to Facebook during September 2016 consisting of:
 + Nearly 1.7 million Facebook comments discussing the news content
 + Facebook plugin comments
 + Disqus plugin comments
